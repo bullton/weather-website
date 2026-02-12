@@ -4,11 +4,8 @@
 import React from 'react';
 import { Card, Typography, Row, Col, Tooltip } from 'antd';
 import {
-  ThermometerOutlined,
   EyeOutlined,
-  CloudOutlined,
-  SunriseOutlined,
-  SunsetOutlined
+  CloudOutlined
 } from '@ant-design/icons';
 import WeatherIcon from './WeatherIcon';
 import './CurrentWeather.css';
@@ -17,7 +14,10 @@ const { Title, Text } = Typography;
 
 // Use weather emoji icons instead of missing Ant Design icons
 const DropletOutlined = () => <span style={{fontSize: '1.5rem'}}>💧</span>;
+const ThermometerOutlined = () => <span style={{fontSize: '1.5rem'}}>🌡️</span>;
 const WindOutlined = () => <span style={{fontSize: '1.5rem'}}>💨</span>;
+const SunriseOutlined = () => <span style={{fontSize: '1.5rem'}}>🌅</span>;
+const SunsetOutlined = () => <span style={{fontSize: '1.5rem'}}>🌇</span>;
 
 function CurrentWeather({ data }) {
   if (!data) return null;
